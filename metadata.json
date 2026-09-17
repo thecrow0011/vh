@@ -1,0 +1,6 @@
+{
+  "name": "AutoGestion - Carnet de Bord",
+  "description": "Application mobile de gestion de véhicule avec suivi d'entretien, journal de carburant et rappels de documents importants.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

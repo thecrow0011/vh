@@ -1,0 +1,51 @@
+{
+  "id": "/",
+  "name": "AutoGestion - Carnet de Bord",
+  "short_name": "AutoGestion",
+  "description": "Application mobile de gestion de véhicule avec suivi d'entretien, carnet d'échéances et carburant.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#0A0A0A",
+  "background_color": "#0A0A0A",
+  "lang": "fr",
+  "dir": "ltr",
+  "categories": ["utilities", "productivity", "auto"],
+  "icons": [
+    {
+      "src": "/pwa-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-maskable-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Ajouter un plein",
+      "short_name": "Plein",
+      "description": "Enregistrer un nouveau plein de carburant",
+      "url": "/?tab=fuel&action=add",
+      "icons": [{ "src": "/pwa-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Ajouter un entretien",
+      "short_name": "Entretien",
+      "description": "Enregistrer une révision ou réparation",
+      "url": "/?tab=maintenance&action=add",
+      "icons": [{ "src": "/pwa-192x192.png", "sizes": "192x192" }]
+    }
+  ]
+}

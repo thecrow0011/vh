@@ -1,0 +1,55 @@
+{
+  "entities": {
+    "License": {
+      "title": "License",
+      "description": "AutoGestion license entity",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "licenseKey": { "type": "string" },
+        "clientName": { "type": "string" },
+        "vehiclePlate": { "type": "string" },
+        "clientPhone": { "type": "string" },
+        "status": { "type": "string" },
+        "durationDays": { "type": "number" },
+        "createdAt": { "type": "string" },
+        "activatedAt": { "type": "string" },
+        "expiresAt": { "type": "string" },
+        "deviceId": { "type": "string" },
+        "deviceName": { "type": "string" },
+        "deviceActivatedAt": { "type": "string" },
+        "lastCheckedAt": { "type": "string" },
+        "renewalCount": { "type": "number" },
+        "lastRenewalDate": { "type": "string" },
+        "notes": { "type": "string" },
+        "isUsed": { "type": "boolean" }
+      },
+      "required": ["id", "licenseKey", "clientName", "status"]
+    },
+    "LicenseAuditLog": {
+      "title": "LicenseAuditLog",
+      "description": "Audit log entry for license operations",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "licenseId": { "type": "string" },
+        "licenseKey": { "type": "string" },
+        "action": { "type": "string" },
+        "performedBy": { "type": "string" },
+        "details": { "type": "string" },
+        "timestamp": { "type": "string" }
+      },
+      "required": ["action", "performedBy", "timestamp"]
+    }
+  },
+  "firestore": {
+    "/licenses/{licenseId}": {
+      "schema": "License",
+      "description": "Collection of all application licenses"
+    },
+    "/license_audit_logs/{logId}": {
+      "schema": "LicenseAuditLog",
+      "description": "Audit logs of administrative actions"
+    }
+  }
+}
